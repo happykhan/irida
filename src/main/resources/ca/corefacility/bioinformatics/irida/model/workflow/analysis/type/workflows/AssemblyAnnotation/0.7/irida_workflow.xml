@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>4ab671c3-ebfb-4cae-82a6-2facb3d09f23</id>
+  <id>3590eb00-2a61-4e96-9872-df3d674c069e</id>
   <name>AssemblyAnnotation</name>
-  <version>0.5</version>
+  <version>0.7</version>
   <analysisType>ASSEMBLY_ANNOTATION</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
@@ -161,16 +161,16 @@
     </parameter>
   </parameters>
   <outputs>
-    <output name="library_card" fileName="library_card"/>
-    <output name="library_card" fileName="library_card"/>
-    <output name="library.shov.log" fileName="library.shov.log"/>
-    <output name="library.fasta" fileName="library.fasta"/>
-    <output name="input_files_mlst" fileName="input_files_mlst"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
+    <output name="card_genes.fasta" fileName="card_genes.fasta"/>
+    <output name="card_report" fileName="card_report"/>
+    <output name="shov.log" fileName="shov.log"/>
+    <output name="contigs.fasta" fileName="contigs.fasta"/>
+    <output name="mlst.tab" fileName="mlst.tab"/>
+    <output name="genome.faa" fileName="genome.faa"/>
+    <output name="genome.gff" fileName="genome.gff"/>
+    <output name="genome.gbk" fileName="genome.gbk"/>
+    <output name="prokka_log.txt" fileName="prokka_log.txt"/>
+    <output name="genome.fna" fileName="genome.fna"/>
   </outputs>
   <toolRepositories>
     <repository>

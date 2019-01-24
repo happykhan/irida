@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>4ab671c3-ebfb-4cae-82a6-2facb3d09f23</id>
+  <id>e77f45b5-91aa-4faf-9838-32ac90b5029f</id>
   <name>AssemblyAnnotation</name>
-  <version>0.5</version>
+  <version>0.6</version>
   <analysisType>ASSEMBLY_ANNOTATION</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
@@ -161,16 +161,16 @@
     </parameter>
   </parameters>
   <outputs>
-    <output name="library_card" fileName="library_card"/>
-    <output name="library_card" fileName="library_card"/>
-    <output name="library.shov.log" fileName="library.shov.log"/>
-    <output name="library.fasta" fileName="library.fasta"/>
-    <output name="input_files_mlst" fileName="input_files_mlst"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
-    <output name="input_prokka" fileName="input_prokka"/>
+    <output name="card_genes_#{library|input1}" fileName="card_genes_#{library|input1}"/>
+    <output name="card_report.#{library|input1}" fileName="card_report.#{library|input1}"/>
+    <output name="#{library|input1}.shov.log" fileName="#{library|input1}.shov.log"/>
+    <output name="#{library|input1}.fasta" fileName="#{library|input1}.fasta"/>
+    <output name="mlst_#{input_files}" fileName="mlst_#{input_files}"/>
+    <output name="#{input}_faa" fileName="#{input}_faa"/>
+    <output name="#{input}_gff" fileName="#{input}_gff"/>
+    <output name="#{input}_gbk" fileName="#{input}_gbk"/>
+    <output name="#{input}_prokka_log" fileName="#{input}_prokka_log"/>
+    <output name="#{input}_fna" fileName="#{input}_fna"/>
   </outputs>
   <toolRepositories>
     <repository>
