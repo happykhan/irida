@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>cebb1215-6e8a-4d22-8ab3-e8d88d1bea43</id>
+  <id>abf5ded2-f7ab-4003-b56f-93742d6197c4</id>
   <name>Phylogenetics</name>
   <version>0.1</version>
   <analysisType>PHYLOGENOMICS</analysisType>
@@ -10,84 +10,35 @@
     <requiresSingleSample>false</requiresSingleSample>
   </inputs>
   <parameters>
-    <parameter name="snippy_mod-2-adv.mapqual" defaultValue="60">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="adv.mapqual"/>
+    <parameter name="snippy-2-adv.bwaopt" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="adv.bwaopt"/>
     </parameter>
-    <parameter name="snippy_mod-2-adv.bwaopt" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="adv.bwaopt"/>
+    <parameter name="snippy-2-adv.mapqual" defaultValue="60">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="adv.mapqual"/>
     </parameter>
-    <parameter name="snippy_mod-2-adv.minfrac" defaultValue="0.9">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="adv.minfrac"/>
+    <parameter name="snippy-2-adv.mincov" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="adv.mincov"/>
     </parameter>
-    <parameter name="snippy_mod-2-adv.rgid" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="adv.rgid"/>
+    <parameter name="snippy-2-adv.minfrac" defaultValue="0.9">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="adv.minfrac"/>
     </parameter>
-    <parameter name="snippy_mod-2-adv.mincov" defaultValue="10">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="adv.mincov"/>
+    <parameter name="snippy-2-adv.rgid" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="adv.rgid"/>
     </parameter>
-    <parameter name="snippy_mod-2-fastq_input.fastq_input_selector" defaultValue="paired_collection">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/jowong/snippy_mod/snippy_mod/3.2" parameterName="fastq_input.fastq_input_selector"/>
+    <parameter name="snippy-2-fastq_input.fastq_input_selector" defaultValue="paired_collection">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2" parameterName="fastq_input.fastq_input_selector"/>
     </parameter>
-    <parameter name="phylogeny_converter-3-filetype.inouttype" defaultValue="f-p">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/izsam/phylogeny_converter/phylogeny_converter/1.0.0" parameterName="filetype.inouttype"/>
-    </parameter>
-    <parameter name="phylogeny_converter-3-filetype.type" defaultValue="multi">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/izsam/phylogeny_converter/phylogeny_converter/1.0.0" parameterName="filetype.type"/>
-    </parameter>
-    <parameter name="fastme-4-fileout_label" defaultValue="Newick tree">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="fileout_label"/>
-    </parameter>
-    <parameter name="fastme-4-gammaChoice.gamma" defaultValue="true">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="gammaChoice.gamma"/>
-    </parameter>
-    <parameter name="fastme-4-bootChoice.boot" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="bootChoice.boot"/>
-    </parameter>
-    <parameter name="fastme-4-distance" defaultValue="--method=I">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="distance"/>
-    </parameter>
-    <parameter name="fastme-4-removeGap" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="removeGap"/>
-    </parameter>
-    <parameter name="fastme-4-gammaChoice.rate" defaultValue="1.0">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="gammaChoice.rate"/>
-    </parameter>
-    <parameter name="fastme-4-equilibrium" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="equilibrium"/>
-    </parameter>
-    <parameter name="fastme-4-typeChoice.datatype" defaultValue="d">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="typeChoice.datatype"/>
-    </parameter>
-    <parameter name="fastme-4-typeChoice.modeldna" defaultValue="T">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="typeChoice.modeldna"/>
-    </parameter>
-    <parameter name="fastme-4-treeRefinement" defaultValue="--spr">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/gandres/fastme/fastme/2.1.4.2" parameterName="treeRefinement"/>
+    <parameter name="snippy-3-is_reference" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2" parameterName="is_reference"/>
     </parameter>
   </parameters>
-  <outputs>
-    <output name="consensus_#{fastq_input|fastq_input1}" fileName="consensus_#{fastq_input|fastq_input1}"/>
-    <output name="fastme_tree.#{input}" fileName="fastme_tree.#{input}"/>
-    <output name="phylo_fastme.#{input}" fileName="phylo_fastme.#{input}"/>
-  </outputs>
+  <outputs/>
   <toolRepositories>
     <repository>
-      <name>snippy_mod</name>
-      <owner>jowong</owner>
+      <name>snippy</name>
+      <owner>iuc</owner>
       <url>https://toolshed.g2.bx.psu.edu</url>
-      <revision>55e3a2bbcde6</revision>
-    </repository>
-    <repository>
-      <name>phylogeny_converter</name>
-      <owner>izsam</owner>
-      <url>https://toolshed.g2.bx.psu.edu</url>
-      <revision>37392af48c37</revision>
-    </repository>
-    <repository>
-      <name>fastme</name>
-      <owner>gandres</owner>
-      <url>https://toolshed.g2.bx.psu.edu</url>
-      <revision>aea74cec21e0</revision>
+      <revision>c9a8ef2aa380</revision>
     </repository>
   </toolRepositories>
 </iridaWorkflow>
