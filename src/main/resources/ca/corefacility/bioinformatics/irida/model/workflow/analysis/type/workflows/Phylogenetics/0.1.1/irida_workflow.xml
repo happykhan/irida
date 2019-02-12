@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>c1c28fdf-6231-4799-9695-d97626aaa6fa</id>
+  <id>4698101d-f2d0-415a-bda8-adc9e2f3f565</id>
   <name>Phylogenetics</name>
-  <version>0.1</version>
+  <version>0.1.1</version>
   <analysisType>PHYLOGENOMICS</analysisType>
   <inputs>
     <sequenceReadsPaired/>

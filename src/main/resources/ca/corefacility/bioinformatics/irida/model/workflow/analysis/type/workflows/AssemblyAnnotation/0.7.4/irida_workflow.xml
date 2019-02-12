@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>5019fe40-7509-476d-a9c7-068d2fabe696</id>
+  <id>4fc7e2be-c5fc-4a31-ab6d-0a1a707d738b</id>
   <name>AssemblyAnnotation</name>
-  <version>0.7.3</version>
+  <version>0.7.4</version>
   <analysisType>ASSEMBLY_ANNOTATION</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
