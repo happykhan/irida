@@ -1,18 +1,18 @@
+const webpack = require("webpack");
+
 exports.config = {
-  mode: "development",
   devtool: "eval-source-map",
   devServer: {
     proxy: {
       context: () => true,
-      target: "localhost:8080"
-    },
-    overlay: {
-      warnings: false,
-      errors: true
-    },
-    hot: true,
-    writeToDisk: true
+    target: "localhost:8080"
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
-  watch: true
+  overlay: {
+    warnings: false,
+    errors: true
+  },
+  hot: true,
+  writeToDisk: true
+},
+    plugins: [new webpack.HotModuleReplacementPlugin()]
 };
