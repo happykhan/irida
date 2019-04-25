@@ -1,0 +1,550 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "PhyloTyping_master",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [],
+            "label": "reference",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 243,
+                "top": 483
+            },
+            "tool_id": null,
+            "tool_state": "{\"name\": \"reference\"}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "d1080415-7b1a-4ebe-b6f7-101e8ec358c6",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "86ea4b89-1fff-4ab5-a1d9-fc2754f56a6a"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "label": "sequence_reads_paired",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 243,
+                "top": 570
+            },
+            "tool_id": null,
+            "tool_state": "{\"collection_type\": \"list:paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "e647440b-fd0c-401d-81e7-991b18baba43",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "3b7214bc-c4c9-4fd8-aaeb-a1efb8f33ac6"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "fastq_input|fastq_input": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "ref": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool snippy",
+                    "name": "ref"
+                },
+                {
+                    "description": "runtime parameter for tool snippy",
+                    "name": "fastq_input"
+                }
+            ],
+            "label": null,
+            "name": "snippy",
+            "outputs": [
+                {
+                    "name": "snpvcf",
+                    "type": "vcf"
+                },
+                {
+                    "name": "snpgff",
+                    "type": "gff3"
+                },
+                {
+                    "name": "snptab",
+                    "type": "tabular"
+                },
+                {
+                    "name": "snpsum",
+                    "type": "tabular"
+                },
+                {
+                    "name": "snplog",
+                    "type": "txt"
+                },
+                {
+                    "name": "snpalign",
+                    "type": "fasta"
+                },
+                {
+                    "name": "snpconsensus",
+                    "type": "fasta"
+                },
+                {
+                    "name": "snpsdepth",
+                    "type": "tabular"
+                },
+                {
+                    "name": "snpsbam",
+                    "type": "bam"
+                },
+                {
+                    "name": "outdir",
+                    "type": "zip"
+                }
+            ],
+            "position": {
+                "left": 523.5,
+                "top": 434
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutdir": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outdir"
+                },
+                "HideDatasetActionsnpalign": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpalign"
+                },
+                "HideDatasetActionsnpconsensus": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpconsensus"
+                },
+                "HideDatasetActionsnpgff": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpgff"
+                },
+                "HideDatasetActionsnplog": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snplog"
+                },
+                "HideDatasetActionsnpsbam": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpsbam"
+                },
+                "HideDatasetActionsnpsdepth": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpsdepth"
+                },
+                "HideDatasetActionsnpsum": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpsum"
+                },
+                "HideDatasetActionsnptab": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snptab"
+                },
+                "HideDatasetActionsnpvcf": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "snpvcf"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "82f2b6f20fa2",
+                "name": "snippy",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": \"{\\\"bwaopt\\\": \\\"\\\", \\\"mapqual\\\": \\\"60\\\", \\\"mincov\\\": \\\"10\\\", \\\"minfrac\\\": \\\"0.9\\\", \\\"rgid\\\": \\\"\\\"}\", \"__page__\": null, \"outputs\": \"[\\\"outvcf\\\", \\\"outtab\\\", \\\"outzip\\\"]\", \"__rerun_remap_job_id__\": null, \"fastq_input\": \"{\\\"__current_case__\\\": 2, \\\"fastq_input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"fastq_input_selector\\\": \\\"paired_collection\\\"}\", \"ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+            "tool_version": "3.2+galaxy1",
+            "type": "tool",
+            "uuid": "fb1b4b1e-3a9e-46d2-92ed-f87445c876ac",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "indirs": {
+                    "id": 2,
+                    "output_name": "outdir"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool snippy-core",
+                    "name": "indirs"
+                }
+            ],
+            "label": null,
+            "name": "snippy-core",
+            "outputs": [
+                {
+                    "name": "alignment_fasta",
+                    "type": "fasta"
+                },
+                {
+                    "name": "full_alignment_fasta",
+                    "type": "fasta"
+                },
+                {
+                    "name": "alignment_table",
+                    "type": "tabular"
+                },
+                {
+                    "name": "alignment_summary",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 919.5,
+                "top": 422
+            },
+            "post_job_actions": {
+                "HideDatasetActionfull_alignment_fasta": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "full_alignment_fasta"
+                },
+                "RenameDatasetActionalignment_fasta": {
+                    "action_arguments": {
+                        "newname": "core.fasta"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "alignment_fasta"
+                },
+                "RenameDatasetActionalignment_summary": {
+                    "action_arguments": {
+                        "newname": "core.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "alignment_summary"
+                },
+                "RenameDatasetActionalignment_table": {
+                    "action_arguments": {
+                        "newname": "core.csv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "alignment_table"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2",
+            "tool_shed_repository": {
+                "changeset_revision": "82f2b6f20fa2",
+                "name": "snippy",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"outputs\": \"[\\\"outaln\\\", \\\"outtab\\\", \\\"outtxt\\\"]\", \"is_reference\": \"\\\"false\\\"\", \"indirs\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+            "tool_version": "3.2",
+            "type": "tool",
+            "uuid": "2e55a89b-4a63-48e8-b2ad-a4aa94156975",
+            "workflow_outputs": [
+                {
+                    "label": "align_table",
+                    "output_name": "alignment_table",
+                    "uuid": "b7a4ff9f-f9f7-4149-b686-a4ff791809d5"
+                },
+                {
+                    "label": "align_fas",
+                    "output_name": "alignment_fasta",
+                    "uuid": "d090327c-6a5b-42bc-880f-0b7d0021983e"
+                },
+                {
+                    "label": "align_sum",
+                    "output_name": "alignment_summary",
+                    "uuid": "1114ddf0-ca42-47d5-ad02-b6475b684d16"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "infile": {
+                    "id": 3,
+                    "output_name": "alignment_fasta"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Phyogenetic reconstruction with RaXML",
+                    "name": "infile"
+                }
+            ],
+            "label": null,
+            "name": "Phyogenetic reconstruction with RaXML",
+            "outputs": [
+                {
+                    "name": "info",
+                    "type": "txt"
+                },
+                {
+                    "name": "logReq",
+                    "type": "txt"
+                },
+                {
+                    "name": "parsimonyTreeReq",
+                    "type": "nhx"
+                },
+                {
+                    "name": "resultReq",
+                    "type": "nhx"
+                },
+                {
+                    "name": "randomTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bestTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bestTreeMultipleModel",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bestTreeMultipleModelPartitions",
+                    "type": "txt"
+                },
+                {
+                    "name": "log",
+                    "type": "txt"
+                },
+                {
+                    "name": "result",
+                    "type": "nhx"
+                },
+                {
+                    "name": "resultMultipleModelPartitions",
+                    "type": "txt"
+                },
+                {
+                    "name": "parsimonyTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bootstrap",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bipartitions",
+                    "type": "txt"
+                },
+                {
+                    "name": "bipartitionsBranchLabels",
+                    "type": "txt"
+                },
+                {
+                    "name": "strictConsensusTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "majorityRuleConsensusTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "majorityRuleExtendedConsensusTree",
+                    "type": "nhx"
+                },
+                {
+                    "name": "bipartitionFreq",
+                    "type": "txt"
+                },
+                {
+                    "name": "perSiteLLs",
+                    "type": "txt"
+                },
+                {
+                    "name": "distances",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 1201.5,
+                "top": 250
+            },
+            "post_job_actions": {
+                "HideDatasetActionbestTreeMultipleModel": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bestTreeMultipleModel"
+                },
+                "HideDatasetActionbestTreeMultipleModelPartitions": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bestTreeMultipleModelPartitions"
+                },
+                "HideDatasetActionbipartitionFreq": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bipartitionFreq"
+                },
+                "HideDatasetActionbipartitions": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bipartitions"
+                },
+                "HideDatasetActionbipartitionsBranchLabels": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bipartitionsBranchLabels"
+                },
+                "HideDatasetActionbootstrap": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "bootstrap"
+                },
+                "HideDatasetActiondistances": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "distances"
+                },
+                "HideDatasetActionlog": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log"
+                },
+                "HideDatasetActionlogReq": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "logReq"
+                },
+                "HideDatasetActionmajorityRuleConsensusTree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "majorityRuleConsensusTree"
+                },
+                "HideDatasetActionmajorityRuleExtendedConsensusTree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "majorityRuleExtendedConsensusTree"
+                },
+                "HideDatasetActionparsimonyTree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "parsimonyTree"
+                },
+                "HideDatasetActionparsimonyTreeReq": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "parsimonyTreeReq"
+                },
+                "HideDatasetActionperSiteLLs": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "perSiteLLs"
+                },
+                "HideDatasetActionrandomTree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "randomTree"
+                },
+                "HideDatasetActionresult": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "result"
+                },
+                "HideDatasetActionresultMultipleModelPartitions": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "resultMultipleModelPartitions"
+                },
+                "HideDatasetActionresultReq": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "resultReq"
+                },
+                "HideDatasetActionstrictConsensusTree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "strictConsensusTree"
+                },
+                "RenameDatasetActionbestTree": {
+                    "action_arguments": {
+                        "newname": "besttree.newick"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "bestTree"
+                },
+                "RenameDatasetActioninfo": {
+                    "action_arguments": {
+                        "newname": "info.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "info"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4",
+            "tool_shed_repository": {
+                "changeset_revision": "ba29b5e2a4be",
+                "name": "raxml",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"search_model_selector\": \"{\\\"__current_case__\\\": 0, \\\"base_model\\\": \\\"GTRCAT\\\", \\\"model_type\\\": \\\"nucleotide\\\"}\", \"random_seed\": \"\\\"1234567890\\\"\", \"__rerun_remap_job_id__\": null, \"selExtraOpts\": \"{\\\"__current_case__\\\": 0, \\\"extraOptions\\\": \\\"required\\\"}\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+            "tool_version": "8.2.4",
+            "type": "tool",
+            "uuid": "9288322f-e15e-44ec-868f-07f3f2ac3671",
+            "workflow_outputs": [
+                {
+                    "label": "phyinfo",
+                    "output_name": "info",
+                    "uuid": "8c470792-cbfb-4b86-a5f9-1be81320c814"
+                },
+                {
+                    "label": "besttree",
+                    "output_name": "bestTree",
+                    "uuid": "5ce01997-2851-42a0-a091-68bb81ba7234"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "10270d92-cbe2-4aaf-8791-9bbc90fc4767",
+    "version": 11
+}

@@ -1,0 +1,720 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "aa_2_master",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "label": "sequence_reads_paired",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 200,
+                "top": 416
+            },
+            "tool_id": null,
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "fea5daef-3cd9-447d-897f-adb65613f24a",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "700b6799-701a-4779-afe4-916a19707c08"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "single_paired|paired_input": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool fastp",
+                    "name": "single_paired"
+                }
+            ],
+            "label": null,
+            "name": "fastp",
+            "outputs": [
+                {
+                    "name": "output_paired_coll",
+                    "type": "input"
+                },
+                {
+                    "name": "out1",
+                    "type": "input"
+                },
+                {
+                    "name": "out2",
+                    "type": "input"
+                },
+                {
+                    "name": "report_html",
+                    "type": "html"
+                },
+                {
+                    "name": "report_json",
+                    "type": "json"
+                }
+            ],
+            "position": {
+                "left": 379,
+                "top": 602
+            },
+            "post_job_actions": {
+                "HideDatasetActionout1": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "out1"
+                },
+                "HideDatasetActionout2": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "out2"
+                },
+                "HideDatasetActionoutput_paired_coll": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "output_paired_coll"
+                },
+                "HideDatasetActionreport_json": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "report_json"
+                },
+                "RenameDatasetActionreport_html": {
+                    "action_arguments": {
+                        "newname": "fastp.html"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report_html"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5",
+            "tool_shed_repository": {
+                "changeset_revision": "6c2351178f8d",
+                "name": "fastp",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"output_options\": \"{\\\"report_html\\\": \\\"true\\\", \\\"report_json\\\": \\\"false\\\"}\", \"single_paired\": \"{\\\"__current_case__\\\": 2, \\\"adapter_trimming_options\\\": {\\\"adapter_sequence1\\\": \\\"\\\", \\\"adapter_sequence2\\\": \\\"\\\", \\\"disable_adapter_trimming\\\": \\\"false\\\"}, \\\"global_trimming_options\\\": {\\\"trim_front1\\\": \\\"\\\", \\\"trim_front2\\\": \\\"\\\", \\\"trim_tail1\\\": \\\"\\\", \\\"trim_tail2\\\": \\\"\\\"}, \\\"paired_input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"single_paired_selector\\\": \\\"paired_collection\\\"}\", \"read_mod_options\": \"{\\\"base_correction_options\\\": {\\\"correction\\\": \\\"false\\\"}, \\\"cutting_by_quality_options\\\": {\\\"cut_by_quality3\\\": \\\"false\\\", \\\"cut_by_quality5\\\": \\\"false\\\", \\\"cut_mean_quality\\\": \\\"\\\", \\\"cut_window_size\\\": \\\"\\\"}, \\\"polyg_tail_trimming\\\": {\\\"__current_case__\\\": 1, \\\"poly_g_min_len\\\": \\\"\\\", \\\"trimming_select\\\": \\\"\\\"}, \\\"polyx_tail_trimming\\\": {\\\"__current_case__\\\": 1, \\\"polyx_trimming_select\\\": \\\"\\\"}, \\\"umi_processing\\\": {\\\"umi\\\": \\\"false\\\", \\\"umi_len\\\": \\\"\\\", \\\"umi_loc\\\": \\\"\\\", \\\"umi_prefix\\\": \\\"\\\"}}\", \"overrepresented_sequence_analysis\": \"{\\\"overrepresentation_analysis\\\": \\\"false\\\", \\\"overrepresentation_sampling\\\": \\\"\\\"}\", \"filter_options\": \"{\\\"length_filtering_options\\\": {\\\"disable_length_filtering\\\": \\\"false\\\", \\\"length_required\\\": \\\"\\\"}, \\\"low_complexity_filter\\\": {\\\"complexity_threshold\\\": \\\"\\\", \\\"enable_low_complexity_filter\\\": \\\"false\\\"}, \\\"quality_filtering_options\\\": {\\\"disable_quality_filtering\\\": \\\"false\\\", \\\"n_base_limit\\\": \\\"\\\", \\\"qualified_quality_phred\\\": \\\"\\\", \\\"unqualified_percent_limit\\\": \\\"\\\"}}\", \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.19.5",
+            "type": "tool",
+            "uuid": "092a3b21-b63b-4581-ada4-212bbe5382ce",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "report_html",
+                    "uuid": "6c28ca77-5be7-4321-b5b9-ca1460c7a901"
+                }
+            ]
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "library|input1": {
+                    "id": 1,
+                    "output_name": "output_paired_coll"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Shovill",
+                    "name": "library"
+                }
+            ],
+            "label": null,
+            "name": "Shovill",
+            "outputs": [
+                {
+                    "name": "shovill_std_log",
+                    "type": "txt"
+                },
+                {
+                    "name": "contigs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "contigs_graph",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 554,
+                "top": 418
+            },
+            "post_job_actions": {
+                "RenameDatasetActioncontigs": {
+                    "action_arguments": {
+                        "newname": "contigs.fasta"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "contigs"
+                },
+                "RenameDatasetActioncontigs_graph": {
+                    "action_arguments": {
+                        "newname": "contigs.fastg"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "contigs_graph"
+                },
+                "RenameDatasetActionshovill_std_log": {
+                    "action_arguments": {
+                        "newname": "shovill.log"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "shovill_std_log"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4",
+            "tool_shed_repository": {
+                "changeset_revision": "865119fcb694",
+                "name": "shovill",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"false\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"false\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
+            "tool_version": "1.0.4",
+            "type": "tool",
+            "uuid": "b9b506b8-bedf-4d23-994a-25d45cdf0343",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "contigs",
+                    "uuid": "a2f6b1bc-9ab0-40f8-bc33-c19c67d31b41"
+                },
+                {
+                    "label": null,
+                    "output_name": "shovill_std_log",
+                    "uuid": "323c43d3-5674-421f-a42b-1ca6b4d9ba54"
+                },
+                {
+                    "label": null,
+                    "output_name": "contigs_graph",
+                    "uuid": "cb09f353-90a5-41d1-94e1-1c5c822ccef6"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "input_files": {
+                    "id": 2,
+                    "output_name": "contigs"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool MLST",
+                    "name": "input_files"
+                }
+            ],
+            "label": null,
+            "name": "MLST",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                },
+                {
+                    "name": "novel_alleles",
+                    "type": "fasta"
+                }
+            ],
+            "position": {
+                "left": 687,
+                "top": 199
+            },
+            "post_job_actions": {
+                "HideDatasetActionnovel_alleles": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "novel_alleles"
+                },
+                "RenameDatasetActionreport": {
+                    "action_arguments": {
+                        "newname": "mlst.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1",
+            "tool_shed_repository": {
+                "changeset_revision": "1f5641a52664",
+                "name": "mlst",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 0, \\\"advanced\\\": \\\"simple\\\"}\"}",
+            "tool_version": "2.16.1",
+            "type": "tool",
+            "uuid": "20b150f7-a26c-427c-af9b-91ae090ab4fe",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "report",
+                    "uuid": "92023c72-0fe4-45ea-8ce7-bd461087e877"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "file_input": {
+                    "id": 2,
+                    "output_name": "contigs"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ABRicate",
+                    "name": "file_input"
+                }
+            ],
+            "label": null,
+            "name": "ABRicate",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "left": 894,
+                "top": 278
+            },
+            "post_job_actions": {
+                "RenameDatasetActionreport": {
+                    "action_arguments": {
+                        "newname": "card.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8",
+            "tool_shed_repository": {
+                "changeset_revision": "78c75f134c16",
+                "name": "abricate",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"adv\": \"{\\\"db\\\": \\\"resfinder\\\", \\\"min_dna_id\\\": \\\"75.0\\\", \\\"no_header\\\": \\\"false\\\"}\", \"file_input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+            "tool_version": "0.8",
+            "type": "tool",
+            "uuid": "82cee055-f842-4175-89b3-a6579e278c6c",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "report",
+                    "uuid": "1a8024af-0e4e-4879-8cac-daa97950dc14"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "contigs"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Quast",
+                    "name": "input_operon"
+                },
+                {
+                    "description": "runtime parameter for tool Quast",
+                    "name": "annot"
+                },
+                {
+                    "description": "runtime parameter for tool Quast",
+                    "name": "input"
+                },
+                {
+                    "description": "runtime parameter for tool Quast",
+                    "name": "input_ref"
+                }
+            ],
+            "label": null,
+            "name": "Quast",
+            "outputs": [
+                {
+                    "name": "log_txt",
+                    "type": "txt"
+                },
+                {
+                    "name": "mis_ass_tsv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "unalign_tsv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "quast_tsv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "report_html",
+                    "type": "html"
+                },
+                {
+                    "name": "report_pdf",
+                    "type": "pdf"
+                }
+            ],
+            "position": {
+                "left": 840,
+                "top": 430
+            },
+            "post_job_actions": {
+                "HideDatasetActionmis_ass_tsv": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "mis_ass_tsv"
+                },
+                "HideDatasetActionunalign_tsv": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "unalign_tsv"
+                },
+                "RenameDatasetActionlog_txt": {
+                    "action_arguments": {
+                        "newname": "quast.log"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "log_txt"
+                },
+                "RenameDatasetActionquast_tsv": {
+                    "action_arguments": {
+                        "newname": "quast.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "quast_tsv"
+                },
+                "RenameDatasetActionreport_html": {
+                    "action_arguments": {
+                        "newname": "quast.html.zip"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report_html"
+                },
+                "RenameDatasetActionreport_pdf": {
+                    "action_arguments": {
+                        "newname": "quast.pdf"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "report_pdf"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2",
+            "tool_shed_repository": {
+                "changeset_revision": "81df4950d65b",
+                "name": "quast",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"input_operon\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"threshold_contig\": \"\\\"0,1000\\\"\", \"__rerun_remap_job_id__\": null, \"annot\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"large\": \"\\\"false\\\"\", \"type_file\": \"\\\"contig\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_size\": \"\\\"\\\"\", \"input_ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"min_contig\": \"\\\"500\\\"\", \"gene_selection\": \"\\\"prokaryotes\\\"\"}",
+            "tool_version": "5.0.2",
+            "type": "tool",
+            "uuid": "6881a990-0501-444f-beb0-2620fa961710",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "log_txt",
+                    "uuid": "37762347-7b6f-46d8-9cdb-ad79bdbb759d"
+                },
+                {
+                    "label": null,
+                    "output_name": "report_pdf",
+                    "uuid": "6f0a51e9-8e5d-41a3-9a68-5965e43f43b2"
+                },
+                {
+                    "label": null,
+                    "output_name": "report_html",
+                    "uuid": "0af7f227-1225-472b-8451-a45ba19a871c"
+                },
+                {
+                    "label": null,
+                    "output_name": "quast_tsv",
+                    "uuid": "d01b4235-7321-4604-992b-f62d72c0fbc2"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "input": {
+                    "id": 2,
+                    "output_name": "contigs"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Prokka",
+                    "name": "proteins"
+                },
+                {
+                    "description": "runtime parameter for tool Prokka",
+                    "name": "input"
+                }
+            ],
+            "label": null,
+            "name": "Prokka",
+            "outputs": [
+                {
+                    "name": "out_gff",
+                    "type": "gff"
+                },
+                {
+                    "name": "out_gbk",
+                    "type": "txt"
+                },
+                {
+                    "name": "out_fna",
+                    "type": "fasta"
+                },
+                {
+                    "name": "out_faa",
+                    "type": "fasta"
+                },
+                {
+                    "name": "out_ffn",
+                    "type": "fasta"
+                },
+                {
+                    "name": "out_sqn",
+                    "type": "asn1"
+                },
+                {
+                    "name": "out_fsa",
+                    "type": "fasta"
+                },
+                {
+                    "name": "out_tbl",
+                    "type": "txt"
+                },
+                {
+                    "name": "out_tsv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "out_err",
+                    "type": "txt"
+                },
+                {
+                    "name": "out_txt",
+                    "type": "txt"
+                },
+                {
+                    "name": "out_log",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 840,
+                "top": 788
+            },
+            "post_job_actions": {
+                "RenameDatasetActionout_err": {
+                    "action_arguments": {
+                        "newname": "prokka.err"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_err"
+                },
+                "RenameDatasetActionout_faa": {
+                    "action_arguments": {
+                        "newname": "prokka.faa"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_faa"
+                },
+                "RenameDatasetActionout_ffn": {
+                    "action_arguments": {
+                        "newname": "prokka.ffn"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_ffn"
+                },
+                "RenameDatasetActionout_fna": {
+                    "action_arguments": {
+                        "newname": "prokka.fna"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_fna"
+                },
+                "RenameDatasetActionout_fsa": {
+                    "action_arguments": {
+                        "newname": "prokka.fsa"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_fsa"
+                },
+                "RenameDatasetActionout_gbk": {
+                    "action_arguments": {
+                        "newname": "prokka.gbk"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_gbk"
+                },
+                "RenameDatasetActionout_gff": {
+                    "action_arguments": {
+                        "newname": "prokka.gff"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_gff"
+                },
+                "RenameDatasetActionout_log": {
+                    "action_arguments": {
+                        "newname": "prokka.log"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_log"
+                },
+                "RenameDatasetActionout_sqn": {
+                    "action_arguments": {
+                        "newname": "prokka.sqn"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_sqn"
+                },
+                "RenameDatasetActionout_tbl": {
+                    "action_arguments": {
+                        "newname": "prokka.tbl"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_tbl"
+                },
+                "RenameDatasetActionout_tsv": {
+                    "action_arguments": {
+                        "newname": "prokka.tsv"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_tsv"
+                },
+                "RenameDatasetActionout_txt": {
+                    "action_arguments": {
+                        "newname": "prokka.txt"
+                    },
+                    "action_type": "RenameDatasetAction",
+                    "output_name": "out_txt"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13",
+            "tool_shed_repository": {
+                "changeset_revision": "eaee459f3d69",
+                "name": "prokka",
+                "owner": "crs4",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"strain\": \"\\\"\\\"\", \"increment\": \"\\\"1\\\"\", \"species\": \"\\\"\\\"\", \"__page__\": 0, \"usegenus\": \"\\\"false\\\"\", \"evalue\": \"\\\"1e-06\\\"\", \"locustag\": \"\\\"P\\\"\", \"fast\": \"\\\"false\\\"\", \"compliant\": \"{\\\"__current_case__\\\": 0, \\\"addgenes\\\": \\\"false\\\", \\\"compliant_select\\\": \\\"no\\\", \\\"mincontig\\\": \\\"200\\\"}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"kingdom\": \"{\\\"__current_case__\\\": 1, \\\"gcode\\\": \\\"11\\\", \\\"kingdom_select\\\": \\\"Bacteria\\\"}\", \"metagenome\": \"\\\"false\\\"\", \"centre\": \"\\\"\\\"\", \"outputs\": \"[\\\"gff\\\", \\\"gbk\\\", \\\"fna\\\", \\\"faa\\\", \\\"ffn\\\", \\\"sqn\\\", \\\"fsa\\\", \\\"tbl\\\", \\\"tsv\\\", \\\"err\\\", \\\"txt\\\"]\", \"gffver\": \"\\\"3\\\"\", \"norrna\": \"\\\"false\\\"\", \"proteins\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"notrna\": \"\\\"false\\\"\", \"plasmid\": \"\\\"\\\"\", \"rfam\": \"\\\"false\\\"\", \"genus\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null}",
+            "tool_version": "1.13",
+            "type": "tool",
+            "uuid": "59fa82cd-0d65-4133-a89c-a6d52e6fb74d",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "out_txt",
+                    "uuid": "1449e454-0d24-41b6-b5eb-72bbb34d1240"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_tbl",
+                    "uuid": "e38a6e06-02b3-4365-93cb-59499c9d3fba"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_err",
+                    "uuid": "8bffdc94-c952-4584-949f-66487f283eec"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_ffn",
+                    "uuid": "f5f00b59-7a2b-4073-b599-61e75b34ae2a"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_fsa",
+                    "uuid": "64a34b3e-b547-4d22-a171-42875959820e"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_tsv",
+                    "uuid": "98de1a0f-4c69-432a-9d88-d6edb1000381"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_fna",
+                    "uuid": "51814215-c82e-4c8d-bc84-4887b5eedb1a"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_log",
+                    "uuid": "db4d5ecf-cea0-48da-b911-46704ab34647"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_faa",
+                    "uuid": "5c922311-7874-4dd4-88e1-b0f59b69692a"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_gbk",
+                    "uuid": "3e791f60-5c80-43d6-b750-8b87120a6ed0"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_sqn",
+                    "uuid": "c016c419-7723-4841-97a6-d80e4e6f1a95"
+                },
+                {
+                    "label": null,
+                    "output_name": "out_gff",
+                    "uuid": "101158d5-014a-41bb-9573-4e44a7a7b63a"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "f65f4b97-e144-465d-9d16-08cb8e129d4a",
+    "version": 2
+}

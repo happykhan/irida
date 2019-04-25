@@ -1,0 +1,134 @@
+<iridaWorkflow>
+  <id>2316877b-cb60-4711-b594-130cebaba1ac</id>
+  <name>Phylogenetics</name>
+  <version>0.8</version>
+  <analysisType>PHYLOGENOMICS</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <reference>reference</reference>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter defaultValue="" name="snippy-2-adv.bwaopt">
+      <toolParameter parameterName="adv.bwaopt" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="60" name="snippy-2-adv.mapqual">
+      <toolParameter parameterName="adv.mapqual" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="10" name="snippy-2-adv.mincov">
+      <toolParameter parameterName="adv.mincov" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="0.9" name="snippy-2-adv.minfrac">
+      <toolParameter parameterName="adv.minfrac" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="" name="snippy-2-adv.rgid">
+      <toolParameter parameterName="adv.rgid" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="paired_collection" name="snippy-2-fastq_input.fastq_input_selector">
+      <toolParameter parameterName="fastq_input.fastq_input_selector" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="collection" name="ariba-3-library.lib_type">
+      <toolParameter parameterName="library.lib_type" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="90" name="ariba-3-adv_nucmer.nucmer_min_id">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_id" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="200" name="ariba-3-adv_nucmer.nucmer_breaklen">
+      <toolParameter parameterName="adv_nucmer.nucmer_breaklen" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="spades" name="ariba-3-adv_assembly.adv_assembler.assembler">
+      <toolParameter parameterName="adv_assembly.adv_assembler.assembler" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.95" name="ariba-3-adv_other.assembled_threshold">
+      <toolParameter parameterName="adv_other.assembled_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.03" name="ariba-3-adv_other.unique_threshold">
+      <toolParameter parameterName="adv_other.unique_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="wgs" name="ariba-3-adv_assembly.adv_assembler.spades_mode">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_mode" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="1" name="ariba-3-adv_other.threads">
+      <toolParameter parameterName="adv_other.threads" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="true" name="ariba-3-adv_other.force">
+      <toolParameter parameterName="adv_other.force" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="10" name="ariba-3-adv_assembly.min_scaff_depth">
+      <toolParameter parameterName="adv_assembly.min_scaff_depth" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-3-adv_other.verbose">
+      <toolParameter parameterName="adv_other.verbose" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="50" name="ariba-3-adv_assembly.assembly_cov">
+      <toolParameter parameterName="adv_assembly.assembly_cov" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-3-adv_other.noclean">
+      <toolParameter parameterName="adv_other.noclean" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="none" name="ariba-3-adv_assembly.adv_assembler.spades_options">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_options" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="plasmidfinder" name="ariba-3-ariba_databases">
+      <toolParameter parameterName="ariba_databases" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="20" name="ariba-3-adv_nucmer.nucmer_min_len">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_len" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="30" name="ariba-3-adv_other.gene_nt_extend">
+      <toolParameter parameterName="adv_other.gene_nt_extend" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="snippy-4-is_reference">
+      <toolParameter parameterName="is_reference" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2" />
+    </parameter>
+    <parameter defaultValue="GTRCAT" name="raxml-7-search_model_selector.base_model">
+      <toolParameter parameterName="search_model_selector.base_model" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="nucleotide" name="raxml-7-search_model_selector.model_type">
+      <toolParameter parameterName="search_model_selector.model_type" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="1234567890" name="raxml-7-random_seed">
+      <toolParameter parameterName="random_seed" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="required" name="raxml-7-selExtraOpts.extraOptions">
+      <toolParameter parameterName="selExtraOpts.extraOptions" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+  </parameters>
+  <outputs>
+    <output fileName="core.fasta" name="core.fasta" />
+    <output fileName="core_sum.tsv" name="core_sum.tsv" />
+    <output fileName="core.tsv" name="core.tsv" />
+    <output fileName="phan_sum.csv" name="phan_sum.csv" />
+    <output fileName="phan_tree.newick" name="phan_tree.newick" />
+    <output fileName="ariba_summary.csv" name="ariba_summary.csv" />
+    <output fileName="ariba_genes.zip" name="ariba_genes.zip" />
+    <output fileName="tree.newick" name="tree" />
+    <output fileName="info.txt" name="info.txt" />
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>ariba</name>
+      <owner>thanhlv</owner>
+      <url>https://testtoolshed.g2.bx.psu.edu</url>
+      <revision>99da8dc2b590</revision>
+    </repository>
+    <repository>
+      <name>snippy</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>82f2b6f20fa2</revision>
+    </repository>
+    <repository>
+      <name>bundle_collections</name>
+      <owner>irida</owner>
+      <url>https://irida.corefacility.ca/galaxy-shed</url>
+      <revision>7bc329e1ada4</revision>
+    </repository>
+    <repository>
+      <name>raxml</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>ba29b5e2a4be</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

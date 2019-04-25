@@ -1,0 +1,193 @@
+<iridaWorkflow>
+  <id>d0da5a73-725e-4ec0-a44d-e7549461e8b9</id>
+  <name>AssemblyAnnotation</name>
+  <version>0.21</version>
+  <analysisType>ASSEMBLY_ANNOTATION</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter defaultValue="collection" name="shovill-1-library.lib_type">
+      <toolParameter parameterName="library.lib_type" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="false" name="shovill-1-adv.nocorr">
+      <toolParameter parameterName="adv.nocorr" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="2" name="shovill-1-adv.mincov">
+      <toolParameter parameterName="adv.mincov" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="false" name="shovill-1-trim">
+      <toolParameter parameterName="trim" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="contig%05d" name="shovill-1-adv.namefmt">
+      <toolParameter parameterName="adv.namefmt" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="100" name="shovill-1-adv.depth">
+      <toolParameter parameterName="adv.depth" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="true" name="shovill-1-log">
+      <toolParameter parameterName="log" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="" name="shovill-1-adv.gsize">
+      <toolParameter parameterName="adv.gsize" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="" name="shovill-1-adv.kmers">
+      <toolParameter parameterName="adv.kmers" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="" name="shovill-1-adv.opts">
+      <toolParameter parameterName="adv.opts" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="0" name="shovill-1-adv.minlen">
+      <toolParameter parameterName="adv.minlen" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="spades" name="shovill-1-assembler">
+      <toolParameter parameterName="assembler" toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" />
+    </parameter>
+    <parameter defaultValue="simple" name="mlst-2-settings.advanced">
+      <toolParameter parameterName="settings.advanced" toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" />
+    </parameter>
+    <parameter defaultValue="resfinder" name="abricate-3-adv.db">
+      <toolParameter parameterName="adv.db" toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" />
+    </parameter>
+    <parameter defaultValue="75.0" name="abricate-3-adv.min_dna_id">
+      <toolParameter parameterName="adv.min_dna_id" toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" />
+    </parameter>
+    <parameter defaultValue="false" name="abricate-3-adv.no_header">
+      <toolParameter parameterName="adv.no_header" toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" />
+    </parameter>
+    <parameter defaultValue="500" name="quast-4-min_contig">
+      <toolParameter parameterName="min_contig" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="0,1000" name="quast-4-threshold_contig">
+      <toolParameter parameterName="threshold_contig" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="contig" name="quast-4-type_file">
+      <toolParameter parameterName="type_file" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="prokaryotes" name="quast-4-gene_selection">
+      <toolParameter parameterName="gene_selection" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="" name="quast-4-input_size">
+      <toolParameter parameterName="input_size" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="false" name="quast-4-large">
+      <toolParameter parameterName="large" toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" />
+    </parameter>
+    <parameter defaultValue="" name="prokka-5-genus">
+      <toolParameter parameterName="genus" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="" name="prokka-5-species">
+      <toolParameter parameterName="species" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="3" name="prokka-5-gffver">
+      <toolParameter parameterName="gffver" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="" name="prokka-5-centre">
+      <toolParameter parameterName="centre" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="Bacteria" name="prokka-5-kingdom.kingdom_select">
+      <toolParameter parameterName="kingdom.kingdom_select" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="no" name="prokka-5-compliant.compliant_select">
+      <toolParameter parameterName="compliant.compliant_select" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="1" name="prokka-5-increment">
+      <toolParameter parameterName="increment" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="1e-06" name="prokka-5-evalue">
+      <toolParameter parameterName="evalue" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="P" name="prokka-5-locustag">
+      <toolParameter parameterName="locustag" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="11" name="prokka-5-kingdom.gcode">
+      <toolParameter parameterName="kingdom.gcode" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-fast">
+      <toolParameter parameterName="fast" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-usegenus">
+      <toolParameter parameterName="usegenus" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="" name="prokka-5-plasmid">
+      <toolParameter parameterName="plasmid" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-notrna">
+      <toolParameter parameterName="notrna" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="200" name="prokka-5-compliant.mincontig">
+      <toolParameter parameterName="compliant.mincontig" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-norrna">
+      <toolParameter parameterName="norrna" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-metagenome">
+      <toolParameter parameterName="metagenome" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-compliant.addgenes">
+      <toolParameter parameterName="compliant.addgenes" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="" name="prokka-5-strain">
+      <toolParameter parameterName="strain" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+    <parameter defaultValue="false" name="prokka-5-rfam">
+      <toolParameter parameterName="rfam" toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" />
+    </parameter>
+  </parameters>
+  <outputs>
+    <output fileName="contigs.fasta" name="contigs.fasta" />
+    <output fileName="contigs.fastg" name="contigs.fastg" />
+    <output fileName="shovill.log" name="shovill.log" />
+    <output fileName="mlst.tsv" name="mlst.tsv" />
+    <output fileName="card.tsv" name="card.tsv" />
+    <output fileName="quast.log" name="quast.log" />
+    <output fileName="quast.tsv" name="quast.tsv" />
+    <output fileName="quast.html.zip" name="quast.html.zip" />
+    <output fileName="quast.pdf" name="quast.pdf" />
+    <output fileName="prokka.ffn" name="prokka.ffn" />
+    <output fileName="prokka.err" name="prokka.err" />
+    <output fileName="prokka.faa" name="prokka.faa" />
+    <output fileName="prokka.tsv" name="prokka.tsv" />
+    <output fileName="prokka.gff" name="prokka.gff" />
+    <output fileName="prokka.tbl" name="prokka.tbl" />
+    <output fileName="prokka.txt" name="prokka.txt" />
+    <output fileName="prokka.sqn" name="prokka.sqn" />
+    <output fileName="prokka.gbk" name="prokka.gbk" />
+    <output fileName="prokka.log" name="prokka.log" />
+    <output fileName="prokka.fna" name="prokka.fna" />
+    <output fileName="prokka.fsa" name="prokka.fsa" />
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>shovill</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>865119fcb694</revision>
+    </repository>
+    <repository>
+      <name>quast</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>81df4950d65b</revision>
+    </repository>
+    <repository>
+      <name>mlst</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>1f5641a52664</revision>
+    </repository>
+    <repository>
+      <name>abricate</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>78c75f134c16</revision>
+    </repository>
+    <repository>
+      <name>prokka</name>
+      <owner>crs4</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>eaee459f3d69</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

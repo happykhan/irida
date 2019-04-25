@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>3c1a463f-ee55-4c56-8977-e2dee5339624</id>
+  <name>AssemblyAnnotation</name>
+  <version>0.18</version>
+  <analysisType>ASSEMBLY_ANNOTATION</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="fastp-1-single_paired.adapter_trimming_options.adapter_sequence2" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.adapter_trimming_options.adapter_sequence2"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.global_trimming_options.trim_front1" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.global_trimming_options.trim_front1"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.quality_filtering_options.qualified_quality_phred" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.quality_filtering_options.qualified_quality_phred"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.umi_processing.umi" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.umi_processing.umi"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.low_complexity_filter.enable_low_complexity_filter" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.low_complexity_filter.enable_low_complexity_filter"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.adapter_trimming_options.adapter_sequence1" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.adapter_trimming_options.adapter_sequence1"/>
+    </parameter>
+    <parameter name="fastp-1-overrepresented_sequence_analysis.overrepresentation_analysis" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="overrepresented_sequence_analysis.overrepresentation_analysis"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.cutting_by_quality_options.cut_by_quality3" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.cutting_by_quality_options.cut_by_quality3"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.global_trimming_options.trim_tail1" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.global_trimming_options.trim_tail1"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.polyg_tail_trimming.trimming_select" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.polyg_tail_trimming.trimming_select"/>
+    </parameter>
+    <parameter name="fastp-1-output_options.report_json" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="output_options.report_json"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.quality_filtering_options.unqualified_percent_limit" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.quality_filtering_options.unqualified_percent_limit"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.quality_filtering_options.disable_quality_filtering" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.quality_filtering_options.disable_quality_filtering"/>
+    </parameter>
+    <parameter name="fastp-1-overrepresented_sequence_analysis.overrepresentation_sampling" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="overrepresented_sequence_analysis.overrepresentation_sampling"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.umi_processing.umi_prefix" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.umi_processing.umi_prefix"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.single_paired_selector" defaultValue="paired_collection">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.single_paired_selector"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.length_filtering_options.disable_length_filtering" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.length_filtering_options.disable_length_filtering"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.cutting_by_quality_options.cut_mean_quality" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.cutting_by_quality_options.cut_mean_quality"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.global_trimming_options.trim_front2" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.global_trimming_options.trim_front2"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.global_trimming_options.trim_tail2" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.global_trimming_options.trim_tail2"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.umi_processing.umi_len" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.umi_processing.umi_len"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.quality_filtering_options.n_base_limit" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.quality_filtering_options.n_base_limit"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.polyx_tail_trimming.polyx_trimming_select" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.polyx_tail_trimming.polyx_trimming_select"/>
+    </parameter>
+    <parameter name="fastp-1-single_paired.adapter_trimming_options.disable_adapter_trimming" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="single_paired.adapter_trimming_options.disable_adapter_trimming"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.low_complexity_filter.complexity_threshold" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.low_complexity_filter.complexity_threshold"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.umi_processing.umi_loc" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.umi_processing.umi_loc"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.cutting_by_quality_options.cut_window_size" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.cutting_by_quality_options.cut_window_size"/>
+    </parameter>
+    <parameter name="fastp-1-output_options.report_html" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="output_options.report_html"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.cutting_by_quality_options.cut_by_quality5" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.cutting_by_quality_options.cut_by_quality5"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.polyg_tail_trimming.poly_g_min_len" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.polyg_tail_trimming.poly_g_min_len"/>
+    </parameter>
+    <parameter name="fastp-1-filter_options.length_filtering_options.length_required" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="filter_options.length_filtering_options.length_required"/>
+    </parameter>
+    <parameter name="fastp-1-read_mod_options.base_correction_options.correction" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" parameterName="read_mod_options.base_correction_options.correction"/>
+    </parameter>
+    <parameter name="shovill-2-library.lib_type" defaultValue="collection">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="library.lib_type"/>
+    </parameter>
+    <parameter name="shovill-2-adv.nocorr" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.nocorr"/>
+    </parameter>
+    <parameter name="shovill-2-adv.mincov" defaultValue="2">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.mincov"/>
+    </parameter>
+    <parameter name="shovill-2-trim" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="trim"/>
+    </parameter>
+    <parameter name="shovill-2-adv.namefmt" defaultValue="contig%05d">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.namefmt"/>
+    </parameter>
+    <parameter name="shovill-2-adv.depth" defaultValue="100">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.depth"/>
+    </parameter>
+    <parameter name="shovill-2-log" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="log"/>
+    </parameter>
+    <parameter name="shovill-2-adv.gsize" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.gsize"/>
+    </parameter>
+    <parameter name="shovill-2-adv.kmers" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.kmers"/>
+    </parameter>
+    <parameter name="shovill-2-adv.opts" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.opts"/>
+    </parameter>
+    <parameter name="shovill-2-adv.minlen" defaultValue="0">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.minlen"/>
+    </parameter>
+    <parameter name="shovill-2-assembler" defaultValue="spades">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="assembler"/>
+    </parameter>
+    <parameter name="mlst-3-settings.advanced" defaultValue="simple">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.advanced"/>
+    </parameter>
+    <parameter name="abricate-4-adv.db" defaultValue="resfinder">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" parameterName="adv.db"/>
+    </parameter>
+    <parameter name="abricate-4-adv.min_dna_id" defaultValue="75.0">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" parameterName="adv.min_dna_id"/>
+    </parameter>
+    <parameter name="abricate-4-adv.no_header" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/0.8" parameterName="adv.no_header"/>
+    </parameter>
+    <parameter name="quast-5-min_contig" defaultValue="500">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="min_contig"/>
+    </parameter>
+    <parameter name="quast-5-threshold_contig" defaultValue="0,1000">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="threshold_contig"/>
+    </parameter>
+    <parameter name="quast-5-type_file" defaultValue="contig">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="type_file"/>
+    </parameter>
+    <parameter name="quast-5-gene_selection" defaultValue="prokaryotes">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="gene_selection"/>
+    </parameter>
+    <parameter name="quast-5-input_size" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="input_size"/>
+    </parameter>
+    <parameter name="quast-5-large" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2" parameterName="large"/>
+    </parameter>
+    <parameter name="prokka-6-genus" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="genus"/>
+    </parameter>
+    <parameter name="prokka-6-species" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="species"/>
+    </parameter>
+    <parameter name="prokka-6-gffver" defaultValue="3">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="gffver"/>
+    </parameter>
+    <parameter name="prokka-6-centre" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="centre"/>
+    </parameter>
+    <parameter name="prokka-6-kingdom.kingdom_select" defaultValue="Bacteria">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="kingdom.kingdom_select"/>
+    </parameter>
+    <parameter name="prokka-6-compliant.compliant_select" defaultValue="no">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.compliant_select"/>
+    </parameter>
+    <parameter name="prokka-6-increment" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="increment"/>
+    </parameter>
+    <parameter name="prokka-6-evalue" defaultValue="1e-06">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="evalue"/>
+    </parameter>
+    <parameter name="prokka-6-locustag" defaultValue="P">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="locustag"/>
+    </parameter>
+    <parameter name="prokka-6-kingdom.gcode" defaultValue="11">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="kingdom.gcode"/>
+    </parameter>
+    <parameter name="prokka-6-fast" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="fast"/>
+    </parameter>
+    <parameter name="prokka-6-usegenus" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="usegenus"/>
+    </parameter>
+    <parameter name="prokka-6-plasmid" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="plasmid"/>
+    </parameter>
+    <parameter name="prokka-6-notrna" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="notrna"/>
+    </parameter>
+    <parameter name="prokka-6-compliant.mincontig" defaultValue="200">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.mincontig"/>
+    </parameter>
+    <parameter name="prokka-6-norrna" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="norrna"/>
+    </parameter>
+    <parameter name="prokka-6-metagenome" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="metagenome"/>
+    </parameter>
+    <parameter name="prokka-6-compliant.addgenes" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.addgenes"/>
+    </parameter>
+    <parameter name="prokka-6-strain" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="strain"/>
+    </parameter>
+    <parameter name="prokka-6-rfam" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="rfam"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="fastp.html" fileName="fastp.html"/>
+    <output name="contigs.fasta" fileName="contigs.fasta"/>
+    <output name="contigs.fastg" fileName="contigs.fastg"/>
+    <output name="shovill.log" fileName="shovill.log"/>
+    <output name="mlst.tsv" fileName="mlst.tsv"/>
+    <output name="card.tsv" fileName="card.tsv"/>
+    <output name="quast.log" fileName="quast.log"/>
+    <output name="quast.tsv" fileName="quast.tsv"/>
+    <output name="quast.html.zip" fileName="quast.html.zip"/>
+    <output name="quast.pdf" fileName="quast.pdf"/>
+    <output name="prokka.ffn" fileName="prokka.ffn"/>
+    <output name="prokka.err" fileName="prokka.err"/>
+    <output name="prokka.faa" fileName="prokka.faa"/>
+    <output name="prokka.tsv" fileName="prokka.tsv"/>
+    <output name="prokka.gff" fileName="prokka.gff"/>
+    <output name="prokka.tbl" fileName="prokka.tbl"/>
+    <output name="prokka.txt" fileName="prokka.txt"/>
+    <output name="prokka.sqn" fileName="prokka.sqn"/>
+    <output name="prokka.gbk" fileName="prokka.gbk"/>
+    <output name="prokka.log" fileName="prokka.log"/>
+    <output name="prokka.fna" fileName="prokka.fna"/>
+    <output name="prokka.fsa" fileName="prokka.fsa"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>shovill</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>865119fcb694</revision>
+    </repository>
+    <repository>
+      <name>quast</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>81df4950d65b</revision>
+    </repository>
+    <repository>
+      <name>mlst</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>1f5641a52664</revision>
+    </repository>
+    <repository>
+      <name>abricate</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>78c75f134c16</revision>
+    </repository>
+    <repository>
+      <name>prokka</name>
+      <owner>crs4</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>eaee459f3d69</revision>
+    </repository>
+    <repository>
+      <name>fastp</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>6c2351178f8d</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

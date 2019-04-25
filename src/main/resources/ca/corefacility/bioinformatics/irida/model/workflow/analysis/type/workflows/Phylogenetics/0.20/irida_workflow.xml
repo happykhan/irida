@@ -1,0 +1,67 @@
+<iridaWorkflow>
+  <id>bbaf5923-2eaf-446f-a0c6-43cf0a7f6f9f</id>
+  <name>Phylogenetics</name>
+  <version>0.20</version>
+  <analysisType>PHYLOGENOMICS</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <reference>reference</reference>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter defaultValue="" name="snippy-2-adv.bwaopt">
+      <toolParameter parameterName="adv.bwaopt" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="60" name="snippy-2-adv.mapqual">
+      <toolParameter parameterName="adv.mapqual" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="10" name="snippy-2-adv.mincov">
+      <toolParameter parameterName="adv.mincov" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="0.9" name="snippy-2-adv.minfrac">
+      <toolParameter parameterName="adv.minfrac" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="" name="snippy-2-adv.rgid">
+      <toolParameter parameterName="adv.rgid" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="paired_collection" name="snippy-2-fastq_input.fastq_input_selector">
+      <toolParameter parameterName="fastq_input.fastq_input_selector" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
+    </parameter>
+    <parameter defaultValue="false" name="snippy-3-is_reference">
+      <toolParameter parameterName="is_reference" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2" />
+    </parameter>
+    <parameter defaultValue="GTRCAT" name="raxml-4-search_model_selector.base_model">
+      <toolParameter parameterName="search_model_selector.base_model" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="nucleotide" name="raxml-4-search_model_selector.model_type">
+      <toolParameter parameterName="search_model_selector.model_type" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="1234567890" name="raxml-4-random_seed">
+      <toolParameter parameterName="random_seed" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+    <parameter defaultValue="required" name="raxml-4-selExtraOpts.extraOptions">
+      <toolParameter parameterName="selExtraOpts.extraOptions" toolId="toolshed.g2.bx.psu.edu/repos/iuc/raxml/raxml/8.2.4" />
+    </parameter>
+  </parameters>
+  <outputs>
+    <output fileName="core.fasta" name="core.fasta" />
+    <output fileName="core_sum.tsv" name="core_sum.tsv" />
+    <output fileName="core.tsv" name="core.tsv" />
+    <output fileName="tree.newick" name="tree" />
+    <output fileName="info.txt" name="info.txt" />
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>snippy</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>82f2b6f20fa2</revision>
+    </repository>
+    <repository>
+      <name>raxml</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>ba29b5e2a4be</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>
