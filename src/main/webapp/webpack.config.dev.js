@@ -1,6 +1,5 @@
-const webpack = require("webpack");
-
 exports.config = {
+  mode: "development",
   devtool: "eval-source-map",
   devServer: {
     proxy: {
@@ -15,4 +14,5 @@ exports.config = {
     writeToDisk: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
+  watch: true
 };
