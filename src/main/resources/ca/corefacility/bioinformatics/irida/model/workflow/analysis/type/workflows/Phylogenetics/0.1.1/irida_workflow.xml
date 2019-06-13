@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 <iridaWorkflow>
   <id>df284549-1d29-4835-aa05-017c0abd6e84</id>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>4698101d-f2d0-415a-bda8-adc9e2f3f565</id>
+>>>>>>> phac-nml-development
   <name>Phylogenetics</name>
   <version>0.1.1</version>
   <analysisType>PHYLOGENOMICS</analysisType>
   <inputs>
+<<<<<<< HEAD
     <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+=======
+    <sequenceReadsPaired/>
+>>>>>>> phac-nml-development
     <reference>reference</reference>
     <requiresSingleSample>false</requiresSingleSample>
   </inputs>
   <parameters>
+<<<<<<< HEAD
     <parameter defaultValue="" name="snippy-2-adv.bwaopt">
       <toolParameter parameterName="adv.bwaopt" toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" />
     </parameter>
@@ -51,6 +62,31 @@
     <output fileName="info.txt" name="info.txt" />
     <output fileName="raxml.txt" name="raxml.txt" />
   </outputs>
+=======
+    <parameter name="snippy-2-adv.bwaopt" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.bwaopt"/>
+    </parameter>
+    <parameter name="snippy-2-adv.mapqual" defaultValue="60">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.mapqual"/>
+    </parameter>
+    <parameter name="snippy-2-adv.mincov" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.mincov"/>
+    </parameter>
+    <parameter name="snippy-2-adv.minfrac" defaultValue="0.9">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.minfrac"/>
+    </parameter>
+    <parameter name="snippy-2-adv.rgid" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.rgid"/>
+    </parameter>
+    <parameter name="snippy-2-fastq_input.fastq_input_selector" defaultValue="paired_collection">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="fastq_input.fastq_input_selector"/>
+    </parameter>
+    <parameter name="snippy-3-is_reference" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2" parameterName="is_reference"/>
+    </parameter>
+  </parameters>
+  <outputs/>
+>>>>>>> phac-nml-development
   <toolRepositories>
     <repository>
       <name>snippy</name>
@@ -58,6 +94,7 @@
       <url>https://toolshed.g2.bx.psu.edu</url>
       <revision>82f2b6f20fa2</revision>
     </repository>
+<<<<<<< HEAD
     <repository>
       <name>raxml</name>
       <owner>iuc</owner>
@@ -66,3 +103,7 @@
     </repository>
   </toolRepositories>
 </iridaWorkflow>
+=======
+  </toolRepositories>
+</iridaWorkflow>
+>>>>>>> phac-nml-development

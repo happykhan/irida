@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>c1c28fdf-6231-4799-9695-d97626aaa6fa</id>
+  <name>Phylogenetics</name>
+  <version>0.1</version>
+  <analysisType>PHYLOGENOMICS</analysisType>
+  <inputs>
+    <sequenceReadsPaired/>
+    <reference>reference</reference>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="snippy-2-adv.bwaopt" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.bwaopt"/>
+    </parameter>
+    <parameter name="snippy-2-adv.mapqual" defaultValue="60">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.mapqual"/>
+    </parameter>
+    <parameter name="snippy-2-adv.mincov" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.mincov"/>
+    </parameter>
+    <parameter name="snippy-2-adv.minfrac" defaultValue="0.9">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.minfrac"/>
+    </parameter>
+    <parameter name="snippy-2-adv.rgid" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="adv.rgid"/>
+    </parameter>
+    <parameter name="snippy-2-fastq_input.fastq_input_selector" defaultValue="paired_collection">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2+galaxy1" parameterName="fastq_input.fastq_input_selector"/>
+    </parameter>
+    <parameter name="snippy-3-is_reference" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy_core/3.2" parameterName="is_reference"/>
+    </parameter>
+  </parameters>
+  <outputs/>
+  <toolRepositories>
+    <repository>
+      <name>snippy</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>82f2b6f20fa2</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>
