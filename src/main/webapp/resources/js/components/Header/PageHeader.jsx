@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { render } from "react-dom";
+import { Session } from "../session/Session";
 import { blue1 } from "../../styles/colors";
 
 /*
@@ -26,7 +27,8 @@ export class PageHeader extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
+        <Session/>
         {this.state.inGalaxy ? (
           <Suspense
             fallback={
@@ -41,7 +43,7 @@ export class PageHeader extends React.Component {
             <GalaxyAlert />
           </Suspense>
         ) : null}
-      </div>
+      </>
     );
   }
 }
