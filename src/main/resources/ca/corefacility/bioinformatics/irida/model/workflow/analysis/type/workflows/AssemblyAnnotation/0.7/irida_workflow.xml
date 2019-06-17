@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 <iridaWorkflow>
   <id>f6ebc47b-bbc3-40a2-bcf4-838b54b00d15</id>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<iridaWorkflow>
-  <id>3590eb00-2a61-4e96-9872-df3d674c069e</id>
->>>>>>> phac-nml-development
   <name>AssemblyAnnotation</name>
   <version>0.7</version>
   <analysisType>ASSEMBLY_ANNOTATION</analysisType>
@@ -14,7 +8,6 @@
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>
-<<<<<<< HEAD
     <parameter defaultValue="" name="fastp-1-single_paired.adapter_trimming_options.adapter_sequence2">
       <toolParameter parameterName="single_paired.adapter_trimming_options.adapter_sequence2" toolId="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5" />
     </parameter>
@@ -251,170 +244,6 @@
     <output fileName="card.tsv" name="card.tsv" />
     <output fileName="vfdb.tsv" name="vfdb.tsv" />
     <output fileName="ncbi_res.tsv" name="ncbi_res.tsv" />
-=======
-    <parameter name="ariba_run-1-library.lib_type" defaultValue="collection">
-      <toolParameter toolId="ariba_run" parameterName="library.lib_type"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_nucmer.nucmer_min_id" defaultValue="90">
-      <toolParameter toolId="ariba_run" parameterName="adv_nucmer.nucmer_min_id"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_nucmer.nucmer_breaklen" defaultValue="200">
-      <toolParameter toolId="ariba_run" parameterName="adv_nucmer.nucmer_breaklen"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_assembly.adv_assembler.assembler" defaultValue="spades">
-      <toolParameter toolId="ariba_run" parameterName="adv_assembly.adv_assembler.assembler"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.assembled_threshold" defaultValue="0.95">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.assembled_threshold"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.unique_threshold" defaultValue="0.03">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.unique_threshold"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_assembly.adv_assembler.spades_mode" defaultValue="wgs">
-      <toolParameter toolId="ariba_run" parameterName="adv_assembly.adv_assembler.spades_mode"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.threads" defaultValue="1">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.threads"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.force" defaultValue="true">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.force"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_assembly.min_scaff_depth" defaultValue="10">
-      <toolParameter toolId="ariba_run" parameterName="adv_assembly.min_scaff_depth"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.verbose" defaultValue="false">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.verbose"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_assembly.assembly_cov" defaultValue="50">
-      <toolParameter toolId="ariba_run" parameterName="adv_assembly.assembly_cov"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.noclean" defaultValue="false">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.noclean"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_assembly.adv_assembler.spades_options" defaultValue="none">
-      <toolParameter toolId="ariba_run" parameterName="adv_assembly.adv_assembler.spades_options"/>
-    </parameter>
-    <parameter name="ariba_run-1-ariba_databases" defaultValue="card">
-      <toolParameter toolId="ariba_run" parameterName="ariba_databases"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_nucmer.nucmer_min_len" defaultValue="20">
-      <toolParameter toolId="ariba_run" parameterName="adv_nucmer.nucmer_min_len"/>
-    </parameter>
-    <parameter name="ariba_run-1-adv_other.gene_nt_extend" defaultValue="30">
-      <toolParameter toolId="ariba_run" parameterName="adv_other.gene_nt_extend"/>
-    </parameter>
-    <parameter name="shovill-2-library.lib_type" defaultValue="collection">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="library.lib_type"/>
-    </parameter>
-    <parameter name="shovill-2-adv.nocorr" defaultValue="true">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.nocorr"/>
-    </parameter>
-    <parameter name="shovill-2-adv.mincov" defaultValue="2">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.mincov"/>
-    </parameter>
-    <parameter name="shovill-2-trim" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="trim"/>
-    </parameter>
-    <parameter name="shovill-2-adv.namefmt" defaultValue="contig%05d">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.namefmt"/>
-    </parameter>
-    <parameter name="shovill-2-adv.depth" defaultValue="100">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.depth"/>
-    </parameter>
-    <parameter name="shovill-2-log" defaultValue="true">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="log"/>
-    </parameter>
-    <parameter name="shovill-2-adv.gsize" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.gsize"/>
-    </parameter>
-    <parameter name="shovill-2-adv.kmers" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.kmers"/>
-    </parameter>
-    <parameter name="shovill-2-adv.opts" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.opts"/>
-    </parameter>
-    <parameter name="shovill-2-adv.minlen" defaultValue="0">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.minlen"/>
-    </parameter>
-    <parameter name="shovill-2-assembler" defaultValue="spades">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="assembler"/>
-    </parameter>
-    <parameter name="mlst-3-settings.advanced" defaultValue="simple">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.advanced"/>
-    </parameter>
-    <parameter name="prokka-4-genus" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="genus"/>
-    </parameter>
-    <parameter name="prokka-4-species" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="species"/>
-    </parameter>
-    <parameter name="prokka-4-gffver" defaultValue="3">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="gffver"/>
-    </parameter>
-    <parameter name="prokka-4-centre" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="centre"/>
-    </parameter>
-    <parameter name="prokka-4-kingdom.kingdom_select" defaultValue="Bacteria">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="kingdom.kingdom_select"/>
-    </parameter>
-    <parameter name="prokka-4-compliant.compliant_select" defaultValue="no">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.compliant_select"/>
-    </parameter>
-    <parameter name="prokka-4-increment" defaultValue="1">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="increment"/>
-    </parameter>
-    <parameter name="prokka-4-evalue" defaultValue="1e-06">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="evalue"/>
-    </parameter>
-    <parameter name="prokka-4-locustag" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="locustag"/>
-    </parameter>
-    <parameter name="prokka-4-kingdom.gcode" defaultValue="11">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="kingdom.gcode"/>
-    </parameter>
-    <parameter name="prokka-4-fast" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="fast"/>
-    </parameter>
-    <parameter name="prokka-4-usegenus" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="usegenus"/>
-    </parameter>
-    <parameter name="prokka-4-plasmid" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="plasmid"/>
-    </parameter>
-    <parameter name="prokka-4-notrna" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="notrna"/>
-    </parameter>
-    <parameter name="prokka-4-compliant.mincontig" defaultValue="200">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.mincontig"/>
-    </parameter>
-    <parameter name="prokka-4-norrna" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="norrna"/>
-    </parameter>
-    <parameter name="prokka-4-metagenome" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="metagenome"/>
-    </parameter>
-    <parameter name="prokka-4-compliant.addgenes" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="compliant.addgenes"/>
-    </parameter>
-    <parameter name="prokka-4-strain" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="strain"/>
-    </parameter>
-    <parameter name="prokka-4-rfam" defaultValue="false">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/crs4/prokka/prokka/1.13" parameterName="rfam"/>
-    </parameter>
-  </parameters>
-  <outputs>
-    <output name="card_genes.fasta" fileName="card_genes.fasta"/>
-    <output name="card_report" fileName="card_report"/>
-    <output name="shov.log" fileName="shov.log"/>
-    <output name="contigs.fasta" fileName="contigs.fasta"/>
-    <output name="mlst.tab" fileName="mlst.tab"/>
-    <output name="genome.faa" fileName="genome.faa"/>
-    <output name="genome.gff" fileName="genome.gff"/>
-    <output name="genome.gbk" fileName="genome.gbk"/>
-    <output name="prokka_log.txt" fileName="prokka_log.txt"/>
-    <output name="genome.fna" fileName="genome.fna"/>
->>>>>>> phac-nml-development
   </outputs>
   <toolRepositories>
     <repository>
@@ -430,21 +259,17 @@
       <revision>1f5641a52664</revision>
     </repository>
     <repository>
-<<<<<<< HEAD
       <name>abricate</name>
       <owner>iuc</owner>
       <url>https://toolshed.g2.bx.psu.edu</url>
       <revision>78c75f134c16</revision>
     </repository>
     <repository>
-=======
->>>>>>> phac-nml-development
       <name>prokka</name>
       <owner>crs4</owner>
       <url>https://toolshed.g2.bx.psu.edu</url>
       <revision>eaee459f3d69</revision>
     </repository>
-<<<<<<< HEAD
     <repository>
       <name>fastp</name>
       <owner>iuc</owner>
@@ -453,7 +278,3 @@
     </repository>
   </toolRepositories>
 </iridaWorkflow>
-=======
-  </toolRepositories>
-</iridaWorkflow>
->>>>>>> phac-nml-development
