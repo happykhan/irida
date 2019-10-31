@@ -63,11 +63,9 @@ export default class Pipeline extends React.Component {
   }
 
   render() {
-    var pipelineUrl = this.url;
+    let pipelineUrl = this.url;
     if (this.props.automatedProject !== null) {
-      pipelineUrl = `${pipelineUrl}?automatedProject=${
-        this.props.automatedProject
-      }`;
+      pipelineUrl = `${pipelineUrl}?automatedProject=${this.props.automatedProject}`;
     }
     return (
       <PipelineCard
@@ -81,8 +79,11 @@ export default class Pipeline extends React.Component {
           this.props.displaySelect
             ? [
                 <Button
-                  size="small"
-                  className={`t-${this.props.name.replace(/\s/g, "_")}_btn t-select-pipeline`}
+                  type="link"
+                  className={`t-${this.props.name.replace(
+                    /\s/g,
+                    "_"
+                  )}_btn t-select-pipeline`}
                   href={pipelineUrl}
                 >
                   {getI18N("pipelines.cart.select")}
